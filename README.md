@@ -4,11 +4,12 @@ LifeGit is a minimalist, GitHub‑inspired personal activity tracker.  Instead o
 
 ## Features
 
-- **Freeform logging:** Write anything about your day.  Hashtags (e.g. `#fitness`) are automatically extracted so you can organise later.
-- **Heatmap calendar:** A GitHub‑style calendar visualises how many times you logged on each day over the past year.  More logs means a darker cell.
-- **Tag filtering:** Filter your timeline by entering one or more hashtags.  Only entries containing all specified tags will be counted and displayed.
-- **Momentum engine:** A simple algorithm computes a momentum score based on how recently you’ve logged.  It decays smoothly instead of resetting to zero when you skip days.  Friendly messages gently welcome you back.
-- **Local‑first:** Everything is stored in your browser using `localStorage` or `IndexedDB`.  There’s no signup or backend.  You can export or import your data as JSON if you need to back it up.
+- **Multi‑commit logging:** LifeGit treats each day like a commit group.  You can add multiple commit messages in one session; each commit gets its own seven‑character hash and extracted hashtags (e.g. `#fitness`).
+- **GitHub‑style heatmap:** A contribution calendar shows commit density over the past year.  Darker cells correspond to more commits on that day.
+- **Universal search bar:** A single search input lets you filter by `#tags`, plain keywords or partial hashes.  Typing a few characters of a hash suggests matching commits.  Only commits satisfying all tokens are shown on the heatmap and in the lists.
+- **Commit detail modal:** Clicking a commit in the daily list opens a modal with its full hash, timestamp, message and tags.  A handy button copies the hash to your clipboard.
+- **Momentum engine:** A smooth exponential decay rewards recent activity without punishing breaks.  Momentum pauses rather than resets when you take time off, and friendly messages gently nudge you back into logging.
+- **Local‑first:** All data lives in your browser using `localStorage`.  No sign‑up or backend is required.  Import/export functions let you back up your logs as JSON.
 
 ## Getting started
 
